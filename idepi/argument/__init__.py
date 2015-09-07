@@ -165,6 +165,7 @@ def feature_args(parser):
     parser.add_argument('--no-pngs',       action='store_false',           dest='PNGS')
     parser.add_argument('--no-pngs-pairs', action='store_false',           dest='PNGS_PAIRS')
     parser.add_argument('--radius',                              type=int, dest='RADIUS')
+    parser.add_argument('--fourier', 							 type=int, dest='FOURIER')
     parser.set_defaults(
         RADIUS=0
         )

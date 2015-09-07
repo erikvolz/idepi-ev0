@@ -1,1 +1,13 @@
 fork w/ implements new feature set based on fourier transform of AA sequences
+
+plans: 
+argument.__init__
+	new element in feature_args()
+		store_const waveNumber
+		dest Fourier
+
+new class 
+feature_extraction/FourierVectorizer
+	fit: return self
+	transform: AA seq -> matrix of chemical properties -> fft 
+
