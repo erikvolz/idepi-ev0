@@ -177,6 +177,9 @@ def main(args=None):
             ('pngs_pairs', MSAVectorizerRegexPairwise(re_pngs, 4, name='PNGS'))
             )
 
+    if ARGS.FOURIER:
+        extractors.append( ('fourier', FourierVectorizer( ARGS.FOURIER)))
+
     extractor = FeatureUnion(extractors, n_jobs=1)  # n_jobs must be one for now
     X = extractor.fit_transform(alignment)
 
